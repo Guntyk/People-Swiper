@@ -17,10 +17,14 @@
   padding: calc(0.28vw * var(--coefficient));
   width: calc(1.05vw * var(--coefficient));
   height: calc(1.05vw * var(--coefficient));
-  top: calc(1.05vw * var(--coefficient));
-  left: calc(1.05vw * var(--coefficient));
+  /* top: calc(1.05vw * var(--coefficient)); */
+  /* left: calc(1.05vw * var(--coefficient)); */
+  top: 26%;
+  left: 18%;
+  transform: translate(-82%, -74%);
   cursor: pointer;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .cross::after,
@@ -78,7 +82,7 @@
 }
 
 .person-detail-name {
-  font-size: calc(3.25vw * var(--coefficient));
+  font-size: calc(2.8vw * var(--coefficient));
   line-height: 1;
 }
 
@@ -98,6 +102,11 @@
   color: rgba(100, 100, 111, 0.8);
   font-size: calc(0.9vw * var(--coefficient));
   line-height: 1.6;
+  max-height: 350px;
+  overflow-x: hidden;
+  white-space: pre-line;
+  width: 85%;
+  padding-right: 20px;
 }
 
 .person-contacts {
@@ -131,6 +140,7 @@
   top: 0;
   right: 0;
   height: 100%;
+  width: 37%;
   object-fit: cover;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -166,20 +176,41 @@
   .person-detail-town,
   .person-detail-phone,
   .person-detail-email {
-    font-size: 20px;
+    font-size: 14px;
+    width: 80%;
   }
   .person-contacts {
     align-items: flex-start;
     flex-direction: column;
   }
+  .cross {
+    top: unset;
+    left: unset;
+    right: 50%;
+    transform: translateX(50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    bottom: 5%;
+  }
+  .cross::after,
+  .cross::before {
+    width: 55%;
+    background: #000;
+  }
   .person-contact {
     margin: calc(0.8vw * var(--coefficient)) 0;
   }
-  .person-detail-photo {
+  .person-detail-description {
     position: absolute;
-    top: 80px;
+    top: 45%;
+    max-height: 500px;
+    font-size: calc(1.9vw * var(--coefficient));
+  }
+  .person-detail-photo {
+    top: 2vw;
     right: calc(3vw * var(--coefficient));
-    height: 70%;
+    height: 40%;
     border-radius: inherit;
   }
 }
