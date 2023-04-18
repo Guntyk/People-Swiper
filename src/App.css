@@ -1,0 +1,43 @@
+.swiper .swiper-wrapper .swiper-slide {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 1rem;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.swiper .swiper-wrapper .swiper-slide-active {
+  transition-delay: 0.2s;
+  color: #000;
+}
+
+.triangle-left,
+.triangle-right {
+  position: absolute;
+  top: 47%;
+  z-index: 99999;
+  width: 0;
+  height: 0;
+  margin: 30px auto;
+  cursor: pointer;
+  border-radius: 50%;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.triangle-right {
+  border-left: 30px solid black;
+  right: 1%;
+}
+.triangle-left {
+  border-right: 30px solid black;
+  left: 1%;
+}
+
+.triangle-left.swiper-button-disabled,
+.triangle-right.swiper-button-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

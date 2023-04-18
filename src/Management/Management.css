@@ -1,0 +1,57 @@
+.managements-selection {
+  display: flex;
+  justify-content: center;
+}
+
+.management-type {
+  margin: 30px;
+  padding: 10px 0;
+  width: 25%;
+  border: 2px solid #222;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  color: #222;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.management-type:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.management-type:active,
+.management-type.active {
+  background: #222;
+  color: #fff;
+  cursor: default;
+}
+
+.person-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 1050px) {
+  .management-type {
+    margin: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .managements-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .management-type {
+    margin: 5px;
+    width: 90%;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+}
