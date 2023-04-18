@@ -14,16 +14,16 @@ export default function PersonInfo({
       }`}
     >
       <div
+        className="cross"
+        onClick={() => {
+          setActivePerson({});
+        }}
+      ></div>
+      <div
         className={`person-detail-card ${
           !person.description ? "non-descripted" : ""
         }`}
       >
-        <div
-          className="cross"
-          onClick={() => {
-            setActivePerson({});
-          }}
-        ></div>
         <div className="person-detail-info">
           <h2 className="person-detail-name">
             {person.surname + " " + person.name}
@@ -37,7 +37,9 @@ export default function PersonInfo({
           <span className="person-detail-town">
             <City /> {person.town}
           </span>
-          <p className="person-detail-description">{person.description}</p>
+          <p className="person-detail-description">
+            {String(person.description)}
+          </p>
           <div className="person-contacts">
             <a
               href={`tel:${person.phone}`}
